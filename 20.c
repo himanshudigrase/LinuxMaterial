@@ -1,0 +1,22 @@
+//Name: Himanshu Shankar Digrase
+// ID: MT2022155
+
+
+// Question 20: Find out the priority of your running program. Modify the priority with nice command.
+
+
+
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+
+int main(void){
+    printf("pid =%d\n",getpid());
+    chdir("/");
+    umask(777);
+    nice(-20);
+    perror("nice ret:");
+    getchar();
+}
