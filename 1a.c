@@ -9,7 +9,7 @@
 #include<unistd.h>
 
 int main(int argc, char* argv[]){
-
+  // points to another file, works just like pointer
   int sl = symlink(argv[1],argv[2]);
 
   if(sl == 0){
