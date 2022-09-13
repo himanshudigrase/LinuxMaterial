@@ -15,7 +15,7 @@ void main()
     char *mknodName = "./mymknod-fifo"; // File name of FIFO file created using `mknod`
 
     int mkfifo_status, mknod_status; // 0 -> Success, -1 -> Error
-
+    // creates a new fifo / pipe file
     mkfifo_status = mkfifo(mkfifoName, S_IRWXU);
 
     if (mkfifo_status == -1)
