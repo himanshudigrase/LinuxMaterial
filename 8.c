@@ -16,6 +16,8 @@ FILE *file = fopen("neww","r");
 }
  char line[500];
  
+ 
+ //function reads a text line or a string from the specified file
  while(fgets(line,sizeof(line),file)) printf("%s",line);
 
 fclose(file);
