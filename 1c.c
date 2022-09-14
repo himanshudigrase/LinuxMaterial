@@ -15,6 +15,7 @@ void main()
     char *mknodName = "./mymknod-fifo"; // File name of FIFO file created using `mknod`
 
     int mkfifo_status, mknod_status; // 0 -> Success, -1 -> Error
+    
     // creates a new fifo / pipe file
     mkfifo_status = mkfifo(mkfifoName, S_IRWXU);
 
@@ -22,7 +23,9 @@ void main()
         perror("Error while creating FIFO file!");
     else
         printf("Succesfully created FIFO file. Check using `ll` or `ls -l` command!\n");
-
+    
+    //You can make a named pipe with it
+    //mknod() function creates a new file named by the path name pointed to by path. 
     mkfifo_status = mknod(mknodName, __S_IFIFO | S_IRWXU, 0);
 
     if (mknod_status == -1)
