@@ -24,7 +24,8 @@ void main(int argc, char *argv[]){
  else{
     filename = argv[1];
     fileDescriptor = open(filename,O_RDWR);
-   
+     
+    //lseek is a system call that is used to change the location of the read/write pointer of a file descriptor.
     offset = lseek(fileDescriptor,10,SEEK_SET);
     writeByteCount = write(fileDescriptor,"1234567890",10);
     if(writeByteCount == -1){
@@ -40,4 +41,4 @@ void main(int argc, char *argv[]){
    close(fileDescriptor);
  }
 }
-
+//od is used to convert the content of input in different formats with octal format as the default format
