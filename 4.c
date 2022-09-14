@@ -10,10 +10,7 @@
 
 extern int errno;
 // This program runs for the first time. If file is not created then it creates
-// a new file and if file already exists then it throws error mentioning
-// File already exists
-
-
+// a new file and if file already exists then it throws error mentioning  EEXIST i:e File already exists
 
 
 int main(){
