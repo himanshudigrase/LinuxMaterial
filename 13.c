@@ -12,6 +12,9 @@
 
 void main(){
 
+ 
+ //The fd_set data type represents file descriptor sets for the select function. It is actually a bit array.
+ 
  fd_set readFDSet, writeFDSet;
  struct timeval time;
  int returnVal;
