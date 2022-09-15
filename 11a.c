@@ -24,6 +24,9 @@ void main(int argc, char *argv[]){
  fileDescriptor = open(filename, O_WRONLY | O_APPEND);
  if(fileDescriptor == -1) perror("Error while opening");
  else{
+  
+  //dup() system call allocates a new file descriptor that refers
+  //to the same open file description as the descriptor oldfd
   dupFileDescriptor = dup(fileDescriptor);
   
   writeByteCount = write(fileDescriptor, "Using original FD",17 );
