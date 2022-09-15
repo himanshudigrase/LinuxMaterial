@@ -25,6 +25,9 @@ void main(int argc, char *argv[]){
 
 
 		else{
+			// The dup2() system call performs the same task as dup(), but
+      // instead of using the lowest-numbered unused file descriptor, it
+       //uses the file descriptor number specified in newfd.
 			dfd = dup2(fd,123);
 			writeByCount = write(fd,"Original FD",11);
 			if(writeByCount == -1)perror("Error while writing");
