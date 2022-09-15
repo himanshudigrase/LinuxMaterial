@@ -14,15 +14,19 @@
 
 void main(int argc, char* argv[]){
 
+    
+ // gets status information about a specified file    
  struct stat statbuf;
  int fd;
 
 if(argc!=2)printf("File name not passed");
 else{
  fd = open(argv[1],O_RDONLY);
-
+  //gets status information about the object specified by the open descriptor fd
+    //and stores the information in the area of memory indicated by the buffer argument(statbuf). 
  fstat(fd,&statbuf);
  
+    //The file mode, stored in the st_mode field of the file attributes, contains two kinds of information: the file type code, and the access permission bit
  if(S_ISREG(statbuf.st_mode)) write(STDOUT_FILENO,"Regular File\n",13);
  else if(S_ISDIR(statbuf.st_mode)) write(STDOUT_FILENO,"Directory File\n",15);
 else if(S_ISCHR(statbuf.st_mode)) write(STDOUT_FILENO,"Character file\n",15);
