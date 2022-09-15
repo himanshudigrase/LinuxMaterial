@@ -5,6 +5,9 @@
 
 #include<stdio.h>  // import for NULL, environ
 
+
+//The variable environ points to an array of pointers to strings
+//called the "environment" containing strings such as USER, HOME, PATH, LANG 
 extern char **environ;
 
 int isUser(char *var){
