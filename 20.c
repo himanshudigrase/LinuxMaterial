@@ -15,6 +15,8 @@
 int main(void){
     printf("pid =%d\n",getpid());
     chdir("/");
+    
+    //umask (user file-creation mode) is a Linux command that lets you set up default permissions for newly created files and folders
     umask(777);
     nice(-20);
     perror("nice ret:");
