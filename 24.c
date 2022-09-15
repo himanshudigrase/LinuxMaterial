@@ -4,6 +4,8 @@
 
 // Question 24: Write a program to create an orphan process
 
+//Orphan processes are those processes that are still running even though their parent process has terminated or finished.
+
 
 #include<sys/stat.h>
 #include<unistd.h>
