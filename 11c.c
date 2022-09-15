@@ -21,6 +21,9 @@ void main(int argc, char* argv[]){
 	fd = open(filename,O_WRONLY|O_APPEND);
 	if(fd == -1)perror("Error while opening");
 	else{
+		
+		// manipulate file descriptor
+		// performs operations on given fd
 		dfd = fcntl(fd,F_DUPFD);
 		writeByCount = write(fd,"\nUsing fcntl original fd",21);
 		if(writeByCount == -1)perror("Error while writing");
