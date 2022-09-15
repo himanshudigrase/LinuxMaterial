@@ -22,9 +22,13 @@ void main(int argc, char* argv[]){
 
 		if(fd == -1)perror("Error while opening");
 		else{
+			// F_GETFL returns  the file access mode and
+              		//the file status flags
 		 status = fcntl(fd,F_GETFL);   // f_getfl obtains open flagd for descriptor
 		if(status==-1)perror("Error on executing fcntl");
 		else{
+			
+			// O_ACCMODE This macro is a mask that can be bitwise-ANDed with the file status flag value to recover the file access mode
 		  switch(O_ACCMODE & status){
 			case 0: printf("FIle opened with O_RDONLY");break;
 			case 1: printf("File opened with O_WRONLY");break;
