@@ -18,6 +18,8 @@ int main(void){
     
     //umask (user file-creation mode) is a Linux command that lets you set up default permissions for newly created files and folders
     umask(777);
+    
+    //nice command in Linux helps in execution of a program/process with modified scheduling priority.
     nice(-20);
     perror("nice ret:");
     getchar();
