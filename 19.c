@@ -8,6 +8,8 @@
 #include<stdio.h>
 #include<sys/types.h>
 #include<unistd.h>
+
+// dst is daylight saving time
 unsigned long long rdtsc(){
     unsigned long long dst;
     __asm__ __volatile__("rdtsc":"=A"(dst));
