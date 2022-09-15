@@ -15,6 +15,8 @@ Question: Write a program to perform mandatory locking.
 void main(int argc, char* argv[]){
 
   char *filename;
+	
+// Apply or remove an advisory lock on the open file specified by fd
   struct flock lock, lockStatus;
   int fd; //filedescriptor
 
