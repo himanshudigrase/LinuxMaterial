@@ -11,7 +11,9 @@ void main(){
     char *execpath = "/bin/ls";
     char *arg1 = "-Rl";
     char *arg2 = "/home/hims";
-
+    
+    //the execvp() function is very useful if you want to run another program using our C program.
+    
     execlp(execpath,execpath,arg1,arg2,NULL,NULL); // second null is for environ variable
 
 }
