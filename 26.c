@@ -7,9 +7,14 @@
 
 #include<unistd.h>
 
+//The exec family of functions replaces the current running process with a new process. 
+//It can be used to run a C program by using another C program
+
+
 void main(){
     char *filepath = "/bin/ls";
     char *arg = "/home/hims";
-
+ 
+    //takes the path of the executable binary file (i.e. /bin/ls) as the first and second argument.
     execl(filepath,filepath,arg,NULL);
 }
