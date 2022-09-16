@@ -13,6 +13,10 @@ void main(){
     pid_t pid;
     pid = getpid();
 
+    
+    //sched_getscheduler() queries the scheduling policy currently applied to the process identified by pid. 
+    //If pid equals zero, the policy of the calling process will be retrieved.
+    
     policyCur = sched_getscheduler(pid);
     struct sched_param priority;
 
