@@ -6,6 +6,9 @@
 
 #include<unistd.h>
 
+
+// -Rl means recursively use a long listing format
+
 void main(){
     char *execpath = "/bin/ls";
     char *arg1 = "-Rl";
