@@ -10,12 +10,16 @@
 #include<stdio.h>
 
 void main(){
+    
+    //pid_t data type is a signed integer type which is capable of representing a process ID
     pid_t child1, child2, child3, terminatedChild;
     int waitStatus;
 
     if(child1 = fork()){
         if(child2 = fork()){
             if(child3 = fork()){
+                
+                //The waitpid() system call suspends execution of the current process until a child specified by pid argument has changed state.
                 terminatedChild = waitpid(child3,&waitStatus,0);
 
                 if(terminatedChild == child3){
